@@ -4,37 +4,71 @@
         <link src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <script src='https://npm.fontawesome.com' crossorigin='anonymous'></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />;
-        <link rel="stylesheet" href="hospital.php">
+     
         <link rel="icon" type="image/x-icon" href="logo.jpg" >
+        <style>
+            body{
+    background-color:aliceblue;
+}
+.container {
+    height:300px;
+    width:300px;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction:row;
+ 
+    background-color: white;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,25%);
+}
+button {
+
+margin-top: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+            </style>
+
 </head>
     <body>
     
-      <?php include('header.php'); ?>
-           <form method="POST" action="database.php" >
-        <div class="login">
-            <div class="role" ><h5>USER ROLE</h5>
-                <select name="role[]" aria-placeholder="select Role">
-                <option value="accountant" name="accountant">Accountant</option>
-                <option value="admin" name="admin">ADMIN</option>
-                <option value="clericalstaff" name="clericalstaff">clerical staff</option>
-                <option value="doctor" name="doctor">Doctor</option>
-                <option value="housekeeping" name="housekeeping">House Keeping</option>
-                <option value="janitorialstaff" name="janitorialstaff">Janitorial staff</option>
-                <option value="labtechnician" name="labtechnician">Lab technician</option>
-                <option value="nurse" name="nurse">Nurse</option>
-                <option value="physician" name="physician">physician</option>
-                <option value="receiptionist" name="receiptionist">Receiptionist</option>
-                
-            </select></div>
-            <div class="name" ><input type="text" placeholder="USER NAME" id="name" name="name" ></div>
-            <div class="pass" ><input type="password" placeholder="PASSWORD" id="password" name="password"></div>
-            <!-- <div class="rememberme" ><input type="checkbox" name="rememberme" name="rememberme">REMEMBER ME</div> -->
-            <div class="submit" ><input type="button" value="submit" name="submit" ></div>
-           
-            <!-- <div class="forgotpass"><a href="forgotpassword.html" name="forgotpass">Forgot PASSWORD</a></div> -->
+      <?php include('header.html'); ?>
+      <div class="container">
+    <h1>Login</h1>
+           <form method="POST" action="roledatabase.php" >
+          
+        <p><label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br></p>
+
+       <p> <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br></p>
+
+      <p>  <label for="role">Role:      </label>
+        <select id="role" name="role">
+            <option value="patient">Patient</option>
+            <option value="receptionist">Receptionist</option>
+            <option value="doctor">Doctor</option>
+            <option value="finance">Finance</option>
+        </select><br></p>
+
+       <p> <button><input type="submit" value="Login"></button></p>
+    </form>
 </div>
 
-
-        <?php include('footer.php'); ?>
+        <?php include('footer.html'); ?>
 </body>
 </html>

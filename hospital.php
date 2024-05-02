@@ -186,12 +186,13 @@ animation-duration:120s;
 
 }
 .heding{
-    margin-top:100px;
+    margin-top:50px;
    text-align: center;
-   margin-bottom:0px;
+  
  
 }
 .depart{
+    
     height:300px;
     width:300px;
    
@@ -203,6 +204,19 @@ animation-duration:120s;
    text-shadow:0px 2px 8px rgba(0,0,0,25%); 
     box-shadow:0px 2px 8px rgba(0,0,0,25%); 
 }
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
 .depart:active{
     transform: scale(2,2);
 }
@@ -286,8 +300,37 @@ animation-duration:120s;
     width:300px;
     box-shadow: 0px 2px 8px rgba(0,0,0,25%);
     text-align: center;
+               
  
 }
+.package{
+    background-color:azure;
+    margin:50px;
+
+  padding-left: 15px;;
+    padding-top:100px;
+    height:300px;
+    width:300px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,25%);
+    text-align: center;
+               
+ 
+}
+button {
+
+margin-top: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
 /* contact */
 .contact{
     display:flex;
@@ -298,7 +341,7 @@ animation-duration:120s;
     height:50px;
     width:50px;
 }
-.diva,.divb,.divc{
+.diva,.divb,.divc,.divd{
     padding-top:50px;
     height:300px;
    width:300px;
@@ -319,6 +362,9 @@ animation-duration:120s;
         flex-direction:column;
      
     
+}
+form{
+    align-items:center;
 }
 </style>
 </head>

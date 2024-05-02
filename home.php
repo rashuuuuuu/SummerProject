@@ -8,7 +8,7 @@
         <link rel="icon" type="image/x-icon" href="logo.jpg" >
     </head>
     <body>
-    <?php include('header.php');?>
+    <?php require('header.html');?>
        <div class="hey">
        <menu class="menu">
         <div>Search<input type="search" class="search"></div>
@@ -24,8 +24,8 @@
        </menu>
        <right>
         <div class="right">
-            <h1>SWOSTA HOSPITAL<h3>is one of the world best hospital.<strong>SWOSTA HOSPITAL</strong>has been dedicated in this medical
-            field since 2000.It serves in <a href="departments.html">diffferent sector.</a></h3></h1>
+            <h1>Times Care<h3>is one of the world best hospital.<strong>TIMES CARE HOSPITAL</strong>has recently opened with the aim to provide best 
+           medical facilities to people of dhading.It serves in <a href="departments.html">diffferent sector.</a></h3></h1>
         </div>
        </right>
      </div>
@@ -36,6 +36,6 @@
         <div class="pic"><img src="pic4.jpg"></img></div>
        </div>
      
-       <?php include('footer.php');?>
+       <?php require('footer.html');?>
         </body>
 </html>  

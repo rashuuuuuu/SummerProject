@@ -3,8 +3,8 @@
        
     </head>
     <body>
-       <?php include('header.php');?>
-       <?php include('footer.php');?>
+       <?php include('header.html');?>
+       <?php include('footer.html');?>
       
            </body></html>
 

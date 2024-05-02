@@ -8,8 +8,8 @@
     </head>
     <body>
        
-    <?php include_once('header.php');?>
-        <div class="heding"><h1>Top specialist at Swosta Hospital</h1></div>
+    <?php include('header.html');?>
+        <div class="heding"><h1>Top specialist at Times Care Hospital</h1></div>
            <div class="department">
             <div class="depart" id="d1" >Anesthesia and pain managemnet<br>
             <input type="button" value="learn more"></div>
@@ -42,6 +42,6 @@
             <div class="depart" id="d16">NeuroSurgery<br>
                 <input type="button" value="learn more"></div>
            </div>
-           <?php include_once('footer.php');?>
+           <?php include('footer.html');?>
         </body>
         </html>
