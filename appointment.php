@@ -12,12 +12,18 @@
   
 </head>
 <style>
+    .date{
+        
+
+    margin-bottom: 10px;
+}
+    
     
     h1{
         text-align:center;
     }
     .container{
-        
+       margin:50px;
   
     display: grid;
             grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
@@ -28,6 +34,8 @@
     }
  
 .a{
+    max-width: 100%;
+        max-height:100%;
     height:400px;
     width:400px;
    
@@ -57,7 +65,7 @@ button:hover {
     }
     </style>
 <body>
-<!-- <?php require('header.html');?> -->
+<?php require('header.html');?>
     <h1>Hospital Appointment System</h1>
 
     <!-- <form action="appointmentprocess.php" method="post">
@@ -74,16 +82,22 @@ button:hover {
     </form> -->
     <form action="appointmentprocess.php" method="post">
 <div class="container">
+
     <div class="a" id="b"> 
         <img src="pic/a.jpeg" alt="Description of the image">
         <h3>Dr.Pramila shakya</h3>  
         <p>Cardiologist</p>
         <div class="footer">
-        <button id="app"><i class="fa-regular fa-calendar"><a href="AppointmentSLot.php"></a></i></button>
+        <button id="app"><i class="fa-regular fa-calendar"></i></button>
+       
    <button id="phone"><i class="fa-solid fa-phone"><a href=""></a></i></button>
    <button id="message"><i class="fa-brands fa-facebook-messenger"><a href=""></a></i></button>
    <button id="view"><i class="fa-regular fa-eye"><a href=""></a></i></button>
+  
     </div> 
+    <div id="appoint">
+        <!-- Appointment slot  -->
+    </div>
 </div>
     <div class="a" id="c"> 
     <img src="pic/b.jpeg" alt="Description of the image">
@@ -299,22 +313,53 @@ Respiratory and Critical Care Medicine</p>
     
    
 </div>
-</form>
+</form> 
 <script>
-    
-    const dayOfWeek = today.getDay();
-    app.addEventListener("click",function(){
-cont newitems='<div class="cooo">
-<div class="date">Date</div>
-<div class="slot">9 AM</div>
-<div class="slot">10 AM</div>
-<div class="slot">11 AM</div>
-<div class="slot">1 PM</div>
-<div class="slot">2 PM</div>
-<div class="slot">3 PM</div>
-</div>';
-app.insertAdjacentHTML("beforeend", newitems);
+   
+document.addEventListener("DOMContentLoaded", function () {
+    const applet = document.getElementById("app");
+    const appoint=document.getElementById("appoint");
+   
+    // applet.addEventListener("click", function () {
+        
+        const newItem = `
+             
+                    <div><h4>Appointment Time </h4></div>
+                    <button class="slot" id="slot" ><a href="appoint.php">9 to 12AM</a></button>
+                   
+              
+        `;
+        // newItem.outerHTML = "<div id='example'><p>New HTML content</p></div>";
+        appoint.insertAdjacentHTML("beforeend", newItem);
+        document.getElementById('appoint').appendChild(newItem); 
     });
+    
+    // document.getElementById('slot').addEventListener('click', function() {
+    //     const url='http://localhost/chatapp/summerproject/NewPatientRegistration.php';
+    //     const features='width=800,height=800';
+    //    window.open(url,'_blank',features);
+    // });
+   
+// });
+// document.getElementById('app').addEventListener('click', function() {
+//     // Create a new button element
+//     const newButton = document.createElement('button');
+    
+//     // Set attributes or add content to the new button if needed
+//     newButton.textContent = '9 AM';
+//     newButton.classList.add('new-button'); // Optionally, add a CSS class to style the new button
+    
+//     // Append the new button to an existing container or to the body
+//     document.getElementById('appoint').appendChild(newButton);
+    
+//     // Optionally, add event listeners or further customization to the new button
+//     newButton.addEventListener('click', function() {
+//         console.log('New button clicked!');
+//         const url='http://localhost/chatapp/summerproject/NewPatientRegistration.php';
+//         const features='width=800,height=800';
+//         window.open(url,'_blank',features);
+//     });
+// });
     </script>
 </body>
 </html>

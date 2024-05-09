@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Factor Authentication</title>
+    <style>
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #otpInput {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Two-Factor Authentication</h1>
+    <p>An OTP (One-Time Password) has been sent to your registered mobile number or email address.</p>
+    <input type="email" id="email" placeholder="EMAIL">
+    <button id="generateotp" onclick="generateOTP()+sendOTP()">Generate OTP</button>
+    <input type="text" id="otpInput" placeholder="Enter OTP">
+    
+    <button onclick="verifyOTP()">Verify OTP</button>
+
+    <script>
+        const email=document.getElementById('email');
+        // Function to verify OTP
+        function verifyOTP() {
+            var enteredOTP = document.getElementById('otpInput').value;
+            var generatedOTP = generateOTP(); // This should be replaced with the actual OTP generation logic
+            if (enteredOTP === generatedOTP) {
+                alert('OTP verified successfully. You are now logged in.');
+                // Redirect the user to the dashboard or another authenticated page
+            } else {
+                alert('Invalid OTP. Please try again.');
+            }
+        }
+
+        // Function to generate a random OTP (for demonstration purposes)
+        function generateOTP() {
+            var digits = '0123456789';
+            var OTP = '';
+            for (var i = 0; i < 6; i++) {
+                OTP += digits[Math.floor(Math.random() * 10)];
+            }
+          return otp;
+        }
+        
+// Function to send OTP via email
+async function sendOTP(email, otp) {
+    // Create a Nodemailer transporter object
+    let transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: email, // Your Gmail address
+            pass: 'your-password' // Your Gmail password
+        }
+    });
+
+    // Send mail with defined transport object
+    let info = await transporter.sendMail({
+        from: email, // Sender address
+        to: email, // List of recipients
+        subject: 'Your OTP', // Subject line
+        text: `Your OTP is: ${otp}` // Plain text body
+    });
+
+    console.log('Message sent: %s', info.messageId);
+}
+
+// Example usage
+const userEmail = 'rashmitasubedi45@gmail.com'; // User's email address
+const otp = generateOTP(); // Generate OTP
+sendOTP(userEmail, otp); // Send OTP to user's email
+
+    </script>
+</body>
+</html>

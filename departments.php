@@ -1,15 +1,32 @@
 <html>
     <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-        <link rel="stylesheet" href="hospital.css">
-        <link rel="icon" type="image/x-icon" href="logo.jpg" >
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />;
-    </head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <link href="hospital.php" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ </head>
+    <style>
+        h1{
+           padding-top:100px;
+                text-align:center;
+        }
+        /* body{
+                margin:50px;
+                padding:50px;
+            } */
+        </style>
     <body>
        
     <?php include('header.html');?>
-        <div class="heding"><h1>Top specialist at Times Care Hospital</h1></div>
+    <h1>Top specialist at Times Care Hospital</h1>
+        <!-- <div class="heding"></div> -->
            <div class="department">
             <div class="depart" id="d1" >Anesthesia and pain managemnet<br>
             <input type="button" value="learn more"></div>

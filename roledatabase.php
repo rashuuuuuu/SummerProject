@@ -1,7 +1,7 @@
 <?php
-
+session_start();
 $users = [
-    "patient" => ["password" => "patient"],
+    "admin" => ["password" => "admin"],
     "receptionist" => ["password" => "receptionist"],
     "doctor" => ["password" => "doctor"],
     "finance" => ["password" => "finance"]
@@ -15,18 +15,20 @@ $role = $_POST['role'];
 if (isset($users[$role]) && $password === $users[$role]["password"]) {
     // Redirect based on role
     switch ($role) {
-        case "patient":
-            header("Location: patient.php");
-            break;
+        
         case "receptionist":
             header("Location: receptionist.php");
             break;
         case "doctor":
-            header("Location: viewdoctor.php");
+            header("Location: viewappointment.php");
             break;
         case "finance":
             header("Location: billing.php");
             break;
+            case "admin":
+           header("Location: admin.php");
+            break;
+
         default:
             // Invalid role
             echo "Invalid role.";

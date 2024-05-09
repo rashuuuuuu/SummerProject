@@ -1,11 +1,16 @@
 <?php
 
-
+session_start();
 //newpatientregistration
 
 $conn=mysqli_connect("localhost","root","","hospital",3306);
 
-
+function validate($data){
+	$data=trim($data);
+	$data=stripslashes($data);
+	$data=htmlspecialchars($data);
+	return $data;
+}
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
 
@@ -27,6 +32,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
              bloodgroup='".$_POST['bloodgroup']."'
 					
 					  ";
+					  $_SESSION['patientname']=$_POST['fname'];
 $success=mysqli_query($conn,$aaaa);
 if($success){
 // 	$headers=array(

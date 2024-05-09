@@ -14,10 +14,10 @@ if ($conn->connect_error) {
 }
 
 // Function to add an appointment
-function addAppointment($patientName, $doctorName, $appointmentDate) {
+function addAppointment($patientName, $doctorName, $appointmentDate,$appointmentTime) {
     global $conn;
-    $sql = "INSERT INTO appointment (patient_name, doctor_name, appointment_date) 
-            VALUES ('$patientName', '$doctorName', '$appointmentDate')";
+    $sql = "INSERT INTO appointment (patient_name, doctor_name, appointment_date,appointment_time) 
+            VALUES ('$patientName', '$doctorName', '$appointmentDate','$appointmentTime')";
     return $conn->query($sql);
 }
 

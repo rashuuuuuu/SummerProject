@@ -97,7 +97,7 @@ animation-duration:120s;
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-
+    position: fixed;
 
 }
 .div1,.div2,.div3{
@@ -174,16 +174,26 @@ animation-duration:120s;
     align-items: center;
     margin-bottom: 30px;
  }
+/* login.html  */
+.login{
+    height:500px;
+    width:500px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    background-color: azure;
+    box-shadow:0px 2px 8px rgba(0,0,0,25%); 
+    margin-top: 10%;
+    padding:20px;
+    margin-left: 30%;
+    align-items: center;
+    margin-bottom: 30px;
+ }
  /* DEpartment.html */
 .department{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-
-   margin-top:80px;
-   
-    
-   
-
+  
 }
 .heding{
     margin-top:50px;

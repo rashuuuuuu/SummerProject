@@ -1,3 +1,14 @@
+// front page js
+let menubar = document.querySelector('#menubar');
+let mynav = document.querySelector('.navbar');
+
+
+menubar.onclick = () =>{
+    menubar.classList.toggle('fa-times')
+    mynav.classList.toggle('active')
+}
+
+// cart for package purchase
 let cartItems = [];
 
 function addToCart(productName, price) {
@@ -25,3 +36,4 @@ function checkout() {
     cartItems = [];
     updateCart();
 }
+
